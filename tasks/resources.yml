@@ -1,0 +1,13 @@
+---
+
+- name: Create resouce directory
+  file: dest={{resources_to}} state=directory
+  when: not resources_clean
+
+- name: Copy resources
+  copy: src={{resources_from}} dest={{resources_to}}
+  when: not resources_clean
+
+- name: Clean resources
+  file: state=absent dest={{resources_to}}
+  when: resources_clean

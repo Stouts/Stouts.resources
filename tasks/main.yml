@@ -1,0 +1,5 @@
+---
+
+- include: resources.yml
+  when: resources_enabled
+  tags: [resources]
