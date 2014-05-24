@@ -1,7 +1,7 @@
 ---
 
 - name: Create resouce directory
-  file: dest={{resources_to}} state=directory
+  file: dest={{resources_to}} state=directory recurse=True
   when: not resources_clean
 
 - name: Copy resources
