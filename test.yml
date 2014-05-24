@@ -1,6 +1,6 @@
 - hosts: all
   sudo: yes
   tasks:
-    - include: 'tasks/main.yml'
-  vars:
+    - include: tasks/main.yml
+  vars_files:
     - defaults/main.yml
