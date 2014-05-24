@@ -3,7 +3,4 @@
   tasks:
     - include: 'tasks/main.yml'
   vars:
-    resources_enabled: yes
-    resources_from: "defaults"
-    resources_to: /etc/ansible
-    resources_clean: no
+    - defaults/main.yml
