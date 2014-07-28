@@ -7,7 +7,10 @@ Ansible role (copy files from your inventory directory to remote server)
 
 The role copied all files from your inventory directory to server (by default
 /etc/ansible/resources). By example if you would like copy your deploy keys,
-configuration files you dont need write additional ansible tasks.
+configuration files you dont need write additional ansible tasks.  Than you
+could use them (make links to them, or copy remotelly)
+
+See also: [Stouts.source](https://github.com/Stouts/Stouts.source)
 
 #### Variables
 ```yaml
@@ -20,7 +23,10 @@ resources_clean: no                           # Delete remote resources director
 #### Usage
 
 Add `Stouts.resources` to your roles. Create `<inventory_dir>\resources`
-directory and place your files here.
+directory and place your files here (`inventory_dir` is a directory where your
+inventory file are placed). All files and directories from the directory will
+be recursively copied to remote machine (by default to remote directory
+`/etc/ansible`).
 
 Example:
 
