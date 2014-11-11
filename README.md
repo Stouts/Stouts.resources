@@ -2,8 +2,7 @@ Stouts.resources
 ================
 
 [![Build Status](http://img.shields.io/travis/Stouts/Stouts.resources.svg?style=flat-square)](https://travis-ci.org/Stouts/Stouts.resources)
-[![Galaxy](http://img.shields.io/badge/galaxy-Stouts.resources-blue.svg?style=flat-square)](https://galaxy.resources.com/list#/roles/859)
-[![Tag](http://img.shields.io/github/tag/Stouts/Stouts.resources.svg?style=flat-square)]()
+[![Galaxy](http://img.shields.io/badge/galaxy-Stouts.resources-blue.svg?style=flat-square)](https://galaxy.ansible.com/list#/roles/859)
 
 Ansible role (copy files from your inventory directory to remote server)
 
