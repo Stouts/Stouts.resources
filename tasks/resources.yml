@@ -4,9 +4,12 @@
   file: dest={{resources_to}} state=directory recurse=True
   when: not resources_clean
 
-- name: Copy resources
+- name: Copy resources directory
   copy: src={{resources_from}} dest={{resources_to}}
-  when: not resources_clean
+  when: not resources_clean and resources_from
+
+- name: Copy resources from keys
+  copy: content={{resources_from}} dest={{resources_to}}
 
 - name: Clean resources
   file: state=absent dest={{resources_to}}
