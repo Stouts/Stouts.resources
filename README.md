@@ -17,6 +17,10 @@ See also: [Stouts.source](https://github.com/Stouts/Stouts.source)
 ```yaml
 resources_enabled: yes                        # Enable the role
 resources_from: "{{inventory_dir}}/resources" # Local resources directory (files will be copied from)
+resources_content: []                         # Copy content to files
+                                              # resources_content: 
+                                              # - content: "CONTENT"
+                                              #   path: "/dest/file/path"
 resources_to: /etc/ansible                    # Remote resources directory (files will be copied to)
 resources_clean: no                           # Delete remote resources directory
 ```
