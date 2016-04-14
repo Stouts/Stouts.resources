@@ -9,7 +9,8 @@
   when: not resources_clean and resources_from
 
 - name: Copy resources from keys
-  copy: content={{resources_from}} dest={{resources_to}}
+  copy: content={{item.content}} dest={{item.path}}
+  with_items: "{{resources_content}}"
 
 - name: Clean resources
   file: state=absent dest={{resources_to}}
